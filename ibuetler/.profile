@@ -1,7 +1,5 @@
-# set keyboard to switzerland
+# set keyboard to english
 setxkbmap ch 
 
-# add copy/paste support in vmware workstation
-sudo /usr/bin/vmware-user-suid-wrapper
 
 
