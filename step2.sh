@@ -2,9 +2,11 @@
 
 #!/bin/ash
 
-apk add curl socat nmap net-tools setxkbmap sudo xrandr bash zsh dbus dbus-x11
+apk add curl wget socat nmap net-tools setxkbmap sudo xrandr bash zsh dbus dbus-x11
 setup-xorg-base dbus-x11
-apk add mesa-gl glib feh firefox-esr accountsservice
+apk add plasma sddm sddm-kcm kde-applications
+apk add mesa-gl glib feh fish firefox-esr vlc accountsservice
+apk add xf86-video-vesa
 
 # add user
 adduser robert
