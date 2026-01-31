@@ -2,12 +2,9 @@
 
 #!/bin/ash
 
-apk add curl socat nmap net-tools build-base setxkbmap sudo xrandr bash termite zsh dbus dbus-x11
-setup-xorg-base xfce4 xfce4-terminal lightdm dbus-x11
-apk add open-vm-tools open-vm-tools-guestinfo open-vm-tools-deploypkg open-vm-tools-gtk
-apk add lightdm-gtk-greeter i3wm i3status libxcb-dev i3lock xf86-video-vmware dmenu
-apk add mesa-gl glib feh firefox-esr accountsservice openvpn
-apk add docker docker-compose
+apk add curl socat nmap net-tools setxkbmap sudo xrandr bash zsh dbus dbus-x11
+setup-xorg-base dbus-x11
+apk add mesa-gl glib feh firefox-esr accountsservice
 
 # add user
 adduser robert
@@ -32,16 +29,8 @@ echo "background=/home/robert/wallpaper/compass.jpg" >> /etc/lightdm/lightdm-gtk
 cp ./robert/robert /var/lib/AccountsService/users
 chown root:root /var/lib/AccountsService/users/robert
 
-# add user to docker
-addgroup robert docker
-
-
 # give robert write access to /opt dir
 chown robert:robert /opt
 
-# mkdir /opt/docker
-mkdir -p /opt/docker
-cp ./docker/* /opt/docker/
-chown robert:robert /opt/docker
 
 
